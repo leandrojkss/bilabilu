@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilabilu2.com</title>
+    <link rel="stylesheet" href="./yes_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heart-container"></div>
+
+    <div class="container">
+        <h1 class="header_text">Eu sabia que você ia dizer que sim!</h1>
+
+        <div class="photo-gallery">
+    <h2 class="texto">Nossos momentos juntos 💕</h2>
+
+    <div class="photos-container">
+        <div class="photo">
+            <img src="./img/alianças.jpg.JPG" alt="Nosso momento especial">
+            <p>Nosso momento especial !</p>
+        </div>
+        <div class="photo">
+            <img src="./img/IMG_5589.PNG" alt="Um dia inesquecível">
+            <p>Um dia inesquecível</p>
+        </div>
+        <div class="photo">
+            <img src="./img/IMG_5860.jpg" alt="Amor verdadeiro">
+            <p>Amo nossas besteiras</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerText = "❤️";
+
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.animationDuration = Math.random() * 5 + 3 + "s";
+
+        document.querySelector(".heart-container").appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+    }
+
+    setInterval(createHeart, 500);
+</script>
+</body>
+</html>
